@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南新座1丁目 ホームページ開設のお知らせ</title>
+    <style>
+        /* A4印刷用基本設定 */
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            background-color: #f5f5f5;
+            color: #333333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* A4用紙コンテナ */
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: #ffffff;
+            padding: 20mm 20mm 18mm 20mm;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* ヘッダー */
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #555555;
+            margin-bottom: 15px;
+        }
+
+        .title-box {
+            background-color: #2e7d32;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 10px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .title-box h1 {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        /* 本文・経緯 */
+        .section-box {
+            background-color: #f0fdf4;
+            border: 2px solid #86efac;
+            border-radius: 8px;
+            padding: 22px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1b5e20;
+            margin-bottom: 12px;
+        }
+
+        .section-content {
+            font-size: 15px;
+            color: #333333;
+            line-height: 1.7;
+        }
+
+        .highlight-text {
+            font-weight: bold;
+            color: #166534;
+            background-color: #dcfce7;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* 注意事項（西小だより） */
+        .alert-box {
+            background-color: #fef2f2;
+            border: 2px solid #fca5a5;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .alert-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #991b1b;
+            margin-bottom: 8px;
+        }
+
+        .alert-content {
+            font-size: 14px;
+            color: #7f1d1d;
+            line-height: 1.6;
+        }
+
+        /* QRコードエリア */
+        .qr-container {
+            border: 2px dashed #94a3b8;
+            background-color: #f8fafc;
+            border-radius: 12px;
+            padding: 25px 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qr-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 6px;
+        }
+
+        .qr-sub {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        .qr-image-wrapper {
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            margin-bottom: 12px;
+        }
+
+        .qr-image-wrapper img {
+            width: 170px;
+            height: 170px;
+            display: block;
+        }
+
+        /* URLリンクスタイル */
+        .qr-url {
+            margin-bottom: 10px;
+        }
+
+        .qr-url a {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1d4ed8;
+            text-decoration: underline;
+            word-break: break-all;
+        }
+
+        .qr-url a:hover {
+            color: #1e40af;
+        }
+
+        .qr-note {
+            font-size: 14px;
+            font-weight: bold;
+            color: #334155;
+        }
+
+        /* 印刷設定 */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .page {
+                box-shadow: none;
+                width: 210mm;
+                height: 297mm;
+            }
+            .qr-url a {
+                text-decoration: none;
+                color: #1e293b;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <div>
+            <!-- ヘッダー情報 -->
+            <div class="header-top">
+                <span>町内会員の皆様へ</span>
+                <span>南新座1丁目町内会</span>
+            </div>
+
+            <!-- タイトル -->
+            <div class="title-box">
+                <h1>南新座1丁目<br>ホームページ開設のお知らせ</h1>
+            </div>
+
+            <!-- ホームページ開設の背景 -->
+            <div class="section-box">
+                <div class="section-title">📌 ホームページ開設の経緯とご案内</div>
+                <div class="section-content">
+                    当町内会では、これまでグループLINEにて回覧板の配信を行ってまいりましたが、<br>
+                    <span class="highlight-text">「グループLINEへの参加に抵抗がある」</span>という方にもお気軽に町内の情報をご確認いただけるよう、このたび公式ホームページを開設いたしました。<br><br>
+                    今後はLINEに加え、ホームページ上でも回覧板や大切なお知らせを順次掲載してまいります。スマホやパソコンからいつでもご覧いただけますので、ぜひご活用ください。
+                </div>
+            </div>
+
+            <!-- 注意書き（西小だよりについて） -->
+            <div class="alert-box">
+                <div class="alert-title">⚠️ 「西小だより」の掲載について</div>
+                <div class="alert-content">
+                    「西小だより」につきましては、児童の写真データや個人情報に関する掲載が含まれているため、プライバシー保護の観点から<strong>ホームページ上への掲載は行いません</strong>。<br>
+                    ※「西小だより」は<strong>紙の回覧板もしくはグループLINE</strong>にてご確認ください。
+                </div>
+            </div>
+        </div>
+
+        <!-- QRコードエリア -->
+        <div class="qr-container">
+            <div class="qr-title">▼ ホームページはこちらからご覧いただけます ▼</div>
+            <div class="qr-sub">スマートフォン等のカメラで下記のQRコードを読み取るか、URLをクリックしてください</div>
+            
+            <div class="qr-image-wrapper">
+                <img src="南新座qr.png" alt="南新座1丁目 HP QRコード">
+            </div>
+
+            <!-- URL追加リンク箇所 -->
+            <div class="qr-url">
+                <a href="https://minamishinza-1.web.app/" target="_blank" rel="noopener noreferrer">https://minamishinza-1.web.app/</a>
+            </div>
+
+            <div class="qr-note">★ ブックマーク（お気に入り登録）しておくと次回からアクセスが便利です</div>
+        </div>
+    </div>
+
+</body>
+</html>
