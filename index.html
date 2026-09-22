@@ -19,22 +19,22 @@
 
         body {
             font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            background-color: #f5f5f5;
+            background-color: #f1f5f9;
             color: #333333;
             line-height: 1.6;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 20px 10px;
         }
 
-        /* A4用紙コンテナ */
+        /* A4用紙コンテナ（PC・印刷時） */
         .page {
             width: 210mm;
-            height: 297mm;
+            min-height: 297mm;
             background: #ffffff;
             padding: 20mm 20mm 18mm 20mm;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             position: relative;
             display: flex;
             flex-direction: column;
@@ -94,6 +94,7 @@
             background-color: #dcfce7;
             padding: 2px 6px;
             border-radius: 4px;
+            display: inline-block;
         }
 
         /* 注意事項（西小だより） */
@@ -157,12 +158,14 @@
         .qr-image-wrapper img {
             width: 170px;
             height: 170px;
+            max-width: 100%;
             display: block;
         }
 
         /* URLリンクスタイル */
         .qr-url {
             margin-bottom: 10px;
+            word-break: break-all;
         }
 
         .qr-url a {
@@ -170,11 +173,8 @@
             font-weight: bold;
             color: #1d4ed8;
             text-decoration: underline;
-            word-break: break-all;
-        }
-
-        .qr-url a:hover {
-            color: #1e40af;
+            padding: 4px 8px;
+            display: inline-block;
         }
 
         .qr-note {
@@ -183,7 +183,87 @@
             color: #334155;
         }
 
-        /* 印刷設定 */
+        /* 📱 スマホ画面表示用の最適化スタイル */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 0;
+                background-color: #ffffff;
+            }
+
+            .page {
+                width: 100%;
+                min-height: auto;
+                padding: 16px 14px;
+                box-shadow: none;
+            }
+
+            .header-top {
+                font-size: 13px;
+                margin-bottom: 12px;
+            }
+
+            .title-box {
+                padding: 16px 8px;
+                margin-bottom: 18px;
+            }
+
+            .title-box h1 {
+                font-size: 20px;
+            }
+
+            .section-box {
+                padding: 16px;
+                margin-bottom: 16px;
+            }
+
+            .section-title {
+                font-size: 16px;
+            }
+
+            .section-content {
+                font-size: 14px;
+            }
+
+            .alert-box {
+                padding: 16px;
+                margin-bottom: 18px;
+            }
+
+            .alert-title {
+                font-size: 15px;
+            }
+
+            .alert-content {
+                font-size: 13px;
+            }
+
+            .qr-container {
+                padding: 20px 12px;
+            }
+
+            .qr-title {
+                font-size: 17px;
+            }
+
+            .qr-sub {
+                font-size: 13px;
+            }
+
+            .qr-image-wrapper img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .qr-url a {
+                font-size: 15px;
+            }
+
+            .qr-note {
+                font-size: 13px;
+            }
+        }
+
+        /* 🖨️ 印刷用の設定 */
         @media print {
             body {
                 background: none;
@@ -193,6 +273,7 @@
                 box-shadow: none;
                 width: 210mm;
                 height: 297mm;
+                padding: 20mm 20mm 18mm 20mm;
             }
             .qr-url a {
                 text-decoration: none;
